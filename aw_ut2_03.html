@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto de Ridix</title>
+</head>
+<body background="imagenes/fondonike.jpg" style="background-size: 100% 100%; font-family: Arial, sans-serif;">
+
+    <h1 style="text-align: center;">Formulario de Contacto</h1>
+
+    <form action="confirmacion.html" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos del Cliente</legend>
+            <label for="nombre">Nombre :</label>
+            <input type="text" id="nombre" name="nombre" maxlength="50" placeholder="Escribe tu nombre completo" required tabindex="1">
+            <br><br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="text" id="email" name="email" maxlength="50" placeholder="Escribe tu correo electrónico" required tabindex="2">
+            <br><br>
+            <label for="comentarios">Mensaje </label>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escribe tu mensaje" tabindex="3"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias de Compra</legend>
+           
+            <br><br>
+            <label for="categoria">¿Qué deseas?</label>
+            <select id="categoria" name="categoria" tabindex="5">
+                <option value="zapatillas">Zapatillas</option>
+                <option value="sudaderas">Sudaderas</option>
+                <option value="ambos">Ambos</option>
+            </select>
+            <br><br>
+            <label for="tallas">¿Qué tallas necesitas? </label>
+            <select id="tallas" name="tallas[]" multiple tabindex="6">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+            <br><br>
+            <label><input type="radio" name="envio" value="email" required tabindex="7"> Recibir novedades por Email</label>
+            <label><input type="radio" name="envio" value="telefono" tabindex="8"> Recibir novedades por WhatsApp</label>
+            <br><br>
+            <label><input type="checkbox" name="newsletter" tabindex="9"> Suscribirme al boletín de ofertas</label>
+        </fieldset>
+
+        <input type="hidden" name="formulario" value="contacto_tienda">
+
+        <fieldset>
+            <legend>Enviar Formulario</legend>
+            <button type="submit" tabindex="10">Enviar</button>
+            <button type="reset" tabindex="11">Limpiar</button>
+            <button type="button" tabindex="12" onclick="alert('Gracias por visitar nuestra tienda')">Info</button>
+        </fieldset>
+    </form>
+
+    <h2 style="text-align: center;">Navega entre nuestras páginas</h2>
+    <div style="text-align: center;">
+        <img src="imagenes/volverinicio.png" alt="Volver al Catálogo Principal" style="cursor: pointer; width: 50px;" onclick="window.location.href='aw_ut2_01.html'">
+        <img src="imagenes/volver.png" alt="Volver al Inicio" style="cursor: pointer; width: 50px;" onclick="window.location.href='aw_ut2_02.html'">
+    </div>
+
+</body>
+</html>
